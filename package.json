@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/qian153087222/wron-wheel/issues"
   },
-  "homepage": "https://github.com/qian153087222/wron-wheel#readme"
+  "homepage": "https://github.com/qian153087222/wron-wheel#readme",
+  "devDependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  }
 }
