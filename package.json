@@ -1,0 +1,20 @@
+{
+  "name": "reactWheel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qian153087222/wron-wheel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/qian153087222/wron-wheel/issues"
+  },
+  "homepage": "https://github.com/qian153087222/wron-wheel#readme"
+}
