@@ -4,8 +4,8 @@ import './importIcons.js'
 interface iconProps {
     name: String,
     color?: string,
-    width?: number | string,
-    height?: number | string
+    width?: string | number,
+    height?: string | number
 }
 
 const Icon: React.FunctionComponent<iconProps> = (props) => {
