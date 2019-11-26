@@ -3,6 +3,10 @@ import ReactDom from 'react-dom';
 
 import Icon from './icon';
 
-ReactDom.render(<Icon name='google' color='yellow'/>,document.querySelector('#root'));
+ReactDom.render(
+    <div>
+        <Icon name='zhifubao' fill='red' />
+    </div>
+    , document.querySelector('#root'));
 
 

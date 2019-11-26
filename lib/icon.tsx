@@ -1,20 +1,22 @@
 import React from 'react';
-import './importIcons.js'
+import './importIcons.js';
+import './icon.scss';
+import classer from './helper/classes'
 
-interface iconProps {
-    name: String,
-    color?: string,
-    width?: string | number,
-    height?: string | number
+interface IconProps extends React.SVGAttributes<SVGElement> {
+    name: string;
+    fill:string;
 }
 
-const Icon: React.FunctionComponent<iconProps> = (props) => {
+const Icon: React.FunctionComponent<IconProps> = ({ className, name,fill, ...otherProps }) => {
+    
     return (
-        <span>
-            <svg width={props.width} height={props.height}>
-                <use fill={props.color}  xlinkHref={`#${props.name}`} />
-            </svg>
-        </span>
+        <svg
+            className={classer('wron-icon',className)}
+            {...otherProps}
+        >
+            <use fill={fill} xlinkHref={`#${name}`} />
+        </svg>
     )
 };
 
