@@ -5,16 +5,15 @@ import classes from '../helper/classes'
 
 interface IconProps extends React.SVGAttributes<SVGElement> {
     name: string;
-    fill: string;
 }
 
-const Icon: React.FunctionComponent<IconProps> = ({ className, name, fill, ...restProps }) => {
+const Icon: React.FunctionComponent<IconProps> = ({ className, name, ...restProps }) => {
     
     return (
         <svg className={classes('wron-icon',className)}
             {...restProps}
         >
-            <use fill={fill} xlinkHref={`#${name}`} />
+            <use xlinkHref={`#${name}`} />
         </svg>
     )
 };

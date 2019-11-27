@@ -5,7 +5,7 @@ import Icon from './icon/icon';
 
 ReactDom.render(
     <div>
-        <Icon name='qq' fill='red' />
+        <Icon name='qq' />
     </div>
     , document.querySelector('#root'));
 
