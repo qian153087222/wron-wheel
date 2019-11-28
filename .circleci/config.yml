@@ -47,7 +47,7 @@ test:
       - attach_workspace:
           at: .
       - run: yarn ci
-      - restore_test_results:
+      - store_test_results:
         # 把测试的结果保存到CircleCI上面
           path:test-results
 # 让CircleCI知道脚本运行顺序
