@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`icon 测试ui 1`] = `
+exports[`icon 测试Iconui 1`] = `
 <svg
   className="wron-icon"
 >

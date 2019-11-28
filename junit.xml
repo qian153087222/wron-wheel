@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="7" failures="0" time="3.813">
+  <testsuite name="classes" errors="0" failures="0" skipped="0" timestamp="2019-11-28T14:30:04" time="2.312" tests="5">
+    <testcase classname="classes 接受1个className" name="classes 接受1个className" time="0.003">
+    </testcase>
+    <testcase classname="classes 接受2个className" name="classes 接受2个className" time="0.001">
+    </testcase>
+    <testcase classname="classes 接受3个className" name="classes 接受3个className" time="0">
+    </testcase>
+    <testcase classname="classes 接受随意传递" name="classes 接受随意传递" time="0">
+    </testcase>
+    <testcase classname="classes 不传递" name="classes 不传递" time="0.001">
+    </testcase>
+  </testsuite>
+  <testsuite name="icon" errors="0" failures="0" skipped="0" timestamp="2019-11-28T14:30:04" time="2.448" tests="2">
+    <testcase classname="icon 测试Iconui" name="icon 测试Iconui" time="0.018">
+    </testcase>
+    <testcase classname="icon onClick" name="icon onClick" time="0.034">
+    </testcase>
+  </testsuite>
+</testsuites>
