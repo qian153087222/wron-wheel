@@ -49,7 +49,7 @@ jobs:
         - run: yarn ci
         - store_test_results:
           # 把测试的结果保存到CircleCI上面
-            path:test-results
+            path: test-results
 # 让CircleCI知道脚本运行顺序
 workflows:
   version: 2
