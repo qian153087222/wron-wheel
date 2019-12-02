@@ -16,7 +16,7 @@ defaults: &defaults
   docker:
     - image: circleci/node:8
 
-vewrsion: 2
+vewrsion: 2.1 
 jobs:
   prepare:
     <<: *defaults
@@ -24,12 +24,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "package.json" }}
+            - v2.1 -dependencies-{{ checksum "package.json" }}
       - run: yarn install
       - save_cache:
           paths:
             - node_modules
-          key: v2-dependencies-{{ checksum "package.json" }}
+          key: v2.1 -dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: .
           paths:
@@ -53,10 +53,10 @@ jobs:
             at: .
         - run: yarn ci
         - store_test_results:
-            path: /test-results/jest
+            path: test-results
 
 workflows:
-  version: 2
+  version: 2.1 
   build_accept_deploy:
     jobs:
       - prepare
