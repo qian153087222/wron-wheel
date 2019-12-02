@@ -1,28 +1,35 @@
 # Javascript Node CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#prepare
+# 把代码迁出
+# 根据当前的package.json，创建MD5，以v2-dependencies-{{ checksum "package.json" }}作为keys，创建缓存
+# 把node_modules保存在缓存，加速之后代码的运行，只要package.json不改变
 #
+#test
+# 把代码迁出
+# 把上面缓存的代码挪过来
+# 把测试的结果保存到CircleCI上面
+#workflows
+# 让CircleCI知道脚本运行顺序
 defaults: &defaults
   docker:
     - image: circleci/node:8
 
-vewrsion: 2
+vewrsion: 1
 jobs:
   prepare:
     <<: *defaults
     steps:
-      # 把代码迁出
       - checkout
-       # 根据当前的package.json，创建MD5，以v2-dependencies-{{ checksum "package.json" }}作为keys，创建缓存
       - restore_cache:
           keys:
-            - v2-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-{{ checksum "package.json" }}
       - run: yarn install
       - save_cache:
           paths:
-             # 把node_modules保存在缓存，加速之后代码的运行，只要package.json不改变
             - node_modules
-          key: v2-dependencies-{{ checksum "package.json" }}
+          key: v1-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: .
           paths:
@@ -40,19 +47,15 @@ jobs:
               - dist
   test:
     <<: *defaults
-    steps:
-        # 把代码迁出
+    steps: 
         - checkout
-        # 把上面缓存的代码挪过来
         - attach_workspace:
             at: .
         - run: yarn ci
         - store_test_results:
-          # 把测试的结果保存到CircleCI上面
-            path: test-results
-# 让CircleCI知道脚本运行顺序
+           path: test-results
 workflows:
-  version: 2
+  version: 1
   build_accept_deploy:
     jobs:
       - prepare

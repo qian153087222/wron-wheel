@@ -1,6 +1,5 @@
 /dist/*
 /test-results/
-*.xml
 
 # Logs
 logs
