@@ -34,8 +34,6 @@ jobs:
           root: .
           paths:
             - node_modules
-      - store_test_results:
-          path: test-results
   build:
     <<: *defaults
     steps:
@@ -47,8 +45,6 @@ jobs:
             root: .
             paths:
               - dist
-        - store_test_results:
-            path: test-results
   test:
     <<: *defaults
     steps: 
