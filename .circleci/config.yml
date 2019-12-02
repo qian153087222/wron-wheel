@@ -16,7 +16,7 @@ defaults: &defaults
   docker:
     - image: circleci/node:8
 
-vewrsion: 1
+vewrsion: 2
 jobs:
   prepare:
     <<: *defaults
@@ -24,12 +24,12 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package.json" }}
+            - v2-dependencies-{{ checksum "package.json" }}
       - run: yarn install
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
+          key: v2-dependencies-{{ checksum "package.json" }}
       - persist_to_workspace:
           root: .
           paths:
@@ -55,7 +55,7 @@ jobs:
         - store_test_results:
            path: test-results
 workflows:
-  version: 1
+  version: 2
   build_accept_deploy:
     jobs:
       - prepare
