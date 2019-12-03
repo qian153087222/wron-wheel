@@ -49,6 +49,14 @@ jobs:
               - package.json
               - LICENSE
               - README.md
+  publish:
+    <<: *defaults
+    steps: 
+        - checkout
+        - attach_workspace:
+            at: .
+        - run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+        - run: npm publish
   test:
     <<: *defaults
     steps: 
@@ -58,14 +66,7 @@ jobs:
         - run: yarn ci
         - store_test_results:
             path: test-results
-publish:
-    <<: *defaults
-    steps: 
-        - checkout
-        - attach_workspace:
-            at: .
-        - run: npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
-        - run: npm publish
+
 
 workflows:
   version: 2
