@@ -5,6 +5,7 @@ const IconExamople: React.FunctionComponent = () => {
     return (
     <div>
         <Icon name='qq' fill='#00BFFF' />
+        <Icon name='close' fill='#00BFFF' />
         <Icon name='android' fill='#00BFFF' />
         <Icon name='baidu' fill='#00BFFF' />
         <Icon name='baiduyunpan' fill='#00BFFF' />

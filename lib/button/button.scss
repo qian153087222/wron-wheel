@@ -4,63 +4,65 @@
     color: white;
     border-radius: 4px;
     border: none;
-    &.wron-Primary{
-        background: #108EE9;
-        &:hover{
-            background: #49a9ee;
+    &.wron-button{
+        &-Primary{
+            background: #108EE9;
+            &:hover{
+                background: #49a9ee;
+            }
+            &:focus{
+                outline:0;
+            }
+            &:active{
+                background: #0e77ca;
+            }
         }
-        &:focus{
-            outline:0;
+        &-Default{
+            color: #000;
+            background: #fff;
+            border: 1px #D9D9D9 solid;
+            &:hover{
+                color: #0e77ca;
+                border: 1px #0e77ca solid;
+            }
+            &:focus{
+                outline:0;
+            }
+            &:active{
+                color: #0e77ca;
+                border: 1px #0e77ca solid;
+            }
         }
-        &:active{
-            background: #0e77ca;
+        &-Dashed{
+            color: #000;
+            background: #fff;
+            border: 1px #D9D9D9 dashed;
+            &:hover{
+                color: #0e77ca;
+                border: 1px #0e77ca dashed;
+            }
+            &:focus{
+                outline:0;
+            }
+            &:active{
+                color: #0e77ca;
+                border: 1px #0e77ca dashed;
+            }
         }
-    }
-    &.wron-Default{
-        color: #000;
-        background: #fff;
-        border: 1px #D9D9D9 solid;
-        &:hover{
-            color: #0e77ca;
-            border: 1px #0e77ca solid;
-        }
-        &:focus{
-            outline:0;
-        }
-        &:active{
-            color: #0e77ca;
-            border: 1px #0e77ca solid;
-        }
-    }
-    &.wron-Dashed{
-        color: #000;
-        background: #fff;
-        border: 1px #D9D9D9 dashed;
-        &:hover{
-            color: #0e77ca;
-            border: 1px #0e77ca dashed;
-        }
-        &:focus{
-            outline:0;
-        }
-        &:active{
-            color: #0e77ca;
-            border: 1px #0e77ca dashed;
-        }
-    }
-    &.wron-Danger{
-        background: #fff;
-        border: 1px #D9D9D9 solid;
-        color: #F04134;
-        &:hover{
-            background: #F04134;
-            color: #fff;
-        }
-        &:focus{
-            outline:0;
-        }
-        &:active{
-            background: #d73435;
+        &-Danger{
+            background: #fff;
+            border: 1px #D9D9D9 solid;
+            color: #F04134;
+            &:hover{
+                background: #F04134;
+                color: #fff;
+            }
+            &:focus{
+                outline:0;
+            }
+            &:active{
+                background: #d73435;
+            }
         }
     }
     
