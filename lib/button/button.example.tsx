@@ -5,7 +5,7 @@ const ButtonExamople: React.FunctionComponent = () => {
     return (
     <div>
         <Button Type='Primary' name={'Primary'} />
-        <Button Type='Default' name={'Default'} />
+        <Button />
         <Button Type='Dashed' name={'Dashed'} />
         <Button Type='Danger' name={'Danger'} />
     </div>)

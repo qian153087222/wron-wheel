@@ -5,8 +5,8 @@ import './button.scss';
 import classes from '../helper/classes'
 
 interface ButtonProps extends React.ButtonHTMLAttributes<Element> {
-    name: string;
-    Type:string;
+    name?: string;
+    Type?:string;
     className?:string;
 };
 
@@ -19,6 +19,11 @@ const Button: React.FunctionComponent<ButtonProps> = ({ className, Type,name, ..
         <button className={classes(`${sc()} ${sc(Type)}`, className) } {...restProps}>{name}</button>
     )
 };
+
+Button.defaultProps = {
+    Type:'Default',
+    name:'Default'
+}
 
 export default Button;
 
